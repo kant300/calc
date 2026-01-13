@@ -10,6 +10,14 @@
 </head>
 <body>
 <p>변수를 적용할 부분에는 span태그로 위치를 지정</p>
-<p><span th:text="${num1}">5</span><span th:text="${op}">+</span><span th:text="${num1}">5</span>=<span th:text="${result}">10</span></p>
+<p>DTO를 통해서 그룹으로 전달된 변수는 DTO명.변수명</p>
+<p>DTO에 변수명으로 값을 출력할때</p>
+<p><span th:text="${calcDto.num1}">5</span><span th:text="${calcDto.op}">+</span><span
+        th:text="${calcDto.num2}">5
+</span>=<span th:text="${calcDto.result}">10</span></p>
+<p>DTO에 getter를 이용해서 값을 출력할때(특별한 경우)</p>
+<p><span th:text="${calcDto.getNum1()}">5</span><span th:text="${calcDto.getOp()}">+</span><span
+        th:text="${calcDto.getNum2()}">5
+</span>=<span th:text="${calcDto.getResult()}">10</span></p>
 </body>
 </html>
